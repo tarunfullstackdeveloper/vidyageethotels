@@ -38,7 +38,7 @@
             <!-- Menu -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto">
-                    <li> <a class="nav-link" href="#" >Home </a></li>
+                    <li> <a class="nav-link" href="index.html" >Home </a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="stay.html">Stay <i class="ti-angle-down"></i></a>
@@ -93,7 +93,7 @@
                 </div>
                 <div class="col-md-5 mb-30 offset-md-1">
                     <h3>Get in touch</h3>
-                    <form method="post" class="contact__form" name="contact-form" action="">
+                    <form method="post" class="contact__form" action="">
                         <!-- form message -->
                         <div class="row">
                             <div class="col-12">
@@ -254,29 +254,6 @@
     <script src="js/datepicker.js"></script>
     <script src="js/smooth-scroll.min.js"></script>
     <script src="js/custom.js"></script>
-    <script type="text/javascript">
-
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyshYaSoWArSXlzl0Igumiti96_kToTXJGM-hYXn9TeSBTMe12k-vHTOI5JCXwMX0teSg/exec'
-    
-        const form = document.forms['contact-form']
-    
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => {
-            // Check if the response is successful
-            if (response.ok) {
-              // If successful, navigate to the thanks page
-              window.location.href = 'thanks.html';
-            } else {
-              // Handle other response scenarios if needed
-              console.error('Error:', response.statusText);
-            }
-          })
-          // .then(() => { window.location.reload(); })
-          .catch(error => console.error('Error!', error.message))
-        })
-    </script>
 </body>
 
 </html>
