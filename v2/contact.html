@@ -254,29 +254,6 @@
     <script src="js/datepicker.js"></script>
     <script src="js/smooth-scroll.min.js"></script>
     <script src="js/custom.js"></script>
-    <script type="text/javascript">
-
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxQJac_3SYhXkCfD-xTMcm6KBkITzhceh9QTvSdBY95wviEjzD8qAfRuX_t4V_OtgA/exec'
-    
-        const form = document.forms['contact-form']
-    
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => {
-            // Check if the response is successful
-            if (response.ok) {
-              // If successful, navigate to the thanks page
-              window.location.href = 'thanks.html';
-            } else {
-              // Handle other response scenarios if needed
-              console.error('Error:', response.statusText);
-            }
-          })
-          // .then(() => { window.location.reload(); })
-          .catch(error => console.error('Error!', error.message))
-        })
-    </script>
 </body>
 
 </html>
